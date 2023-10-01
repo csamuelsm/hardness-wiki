@@ -1,23 +1,33 @@
 'use client';
 
-import { Flex } from '@chakra-ui/react';
+import { Button, Flex } from '@chakra-ui/react';
 
-import CTASection from '~/lib/components/samples/CTASection';
-import SomeImage from '~/lib/components/samples/SomeImage';
-import SomeText from '~/lib/components/samples/SomeText';
+import Popular from '~/lib/components/Popular';
 
 const Home = () => {
   return (
     <Flex
       direction="column"
-      alignItems="center"
+      alignItems="left"
       justifyContent="center"
       minHeight="70vh"
       gap={4}
       mb={8}
       w="full"
     >
-
+      <Flex flexDirection="row">
+        {/* Selectors */}
+        <Button size="xs" marginX={1}>
+          Popular
+        </Button>
+        <Button size="xs" variant="ghost" marginX={1}>
+          Recently added
+        </Button>
+        <Button size="xs" variant="ghost" marginX={1}>
+          Recently updated
+        </Button>
+      </Flex>
+      <Popular />
     </Flex>
   );
 };

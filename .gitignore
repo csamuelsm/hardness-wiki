@@ -50,3 +50,7 @@ sitemap*.xml
 
 # VS Code
 .vscode/settings.json
+
+# env
+.env
+.env.local
